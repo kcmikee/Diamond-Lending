@@ -1,41 +1,51 @@
-# NFT Collateralized lending protocol
+# NFT Collateralized Lending Protocol
 
-This protocol uses a Peer-to-Protocol architecture
+=====================================
 
-![Screenshot from 2024-10-30 01-06-32](https://github.com/user-attachments/assets/1efe8e0e-cf0d-40db-a496-e4116ee66561)
+## Overview
 
+This is an open-source implementation of a decentralized lending protocol that utilizes NFTs as collateral. The protocol is designed to facilitate peer-to-peer lending, enabling users to borrow and lend assets in a trustless and secure manner.
 
-## Installation
+## Getting Started
 
-- Clone this repo
-- Install dependencies
+### Installation
+
+1. Clone this repository to your local machine.
+2. Install dependencies by running the following command:
 
 ```bash
 $ yarn && forge update
 ```
 
-### Compile
+### Compilation
+
+Compile the smart contracts using Hardhat:
 
 ```bash
 $ npx hardhat compile
 ```
 
-## Deployment
+### Deployment
 
-### Hardhat
+Deploy the protocol using either Hardhat or Foundry:
+
+#### Hardhat
 
 ```bash
 $ npx hardhat run scripts/deploy.js
 ```
 
-### Foundry
+#### Foundry
 
 ```bash
 $ forge t
 ```
 
-`Note`: A lot of improvements are still needed so contributions are welcome!!
+## Notable Features
 
-Bonus: The [DiamondLoupefacet](contracts/facets/DiamondLoupeFacet.sol) uses an updated [LibDiamond](contracts/libraries//LibDiamond.sol) which utilises solidity custom errors to make debugging easier especially when upgrading diamonds. Take it for a spin!!
+- The `DiamondLoupeFacet` contract utilizes an updated `LibDiamond` library, which employs Solidity custom errors for improved debugging and diamond upgrades.
+- Take a closer look at the `DiamondLoupeFacet` contract in `contracts/facets/DiamondLoupeFacet.sol` and explore the benefits of using custom errors in your own projects!
 
-Need some more clarity? message me [on twitter](https://twitter.com/Timidan_x), Or join the [EIP-2535 Diamonds Discord server](https://discord.gg/kQewPw2)
+This protocol uses a Peer-to-Protocol architecture
+
+![Screenshot from 2024-10-30 01-06-32](https://github.com/user-attachments/assets/1efe8e0e-cf0d-40db-a496-e4116ee66561)
